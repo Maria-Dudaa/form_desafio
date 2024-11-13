@@ -10,10 +10,9 @@
 
 <section class="text">
 <h2>Formulário de Contato</h2>
-<p>Por favor, preencha o formulário abaixo para entrar em contato conosco para ajudarmos você!.</p>
+<p>Por favor, preencha o formulário abaixo para entrar em contato conosco.</p>
 </section>
-
-<form id="contato-form">
+<form id="contact-form">
     <div>
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
@@ -27,15 +26,48 @@
     </div>
 
     <div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" placeholder="Crie uma senha" required>
+        <span class="error" id="password-error"></span>
+    </div>
+
+    <div>
+        <label for="confirma-senha">Confirmar Senha:</label>
+        <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Confirme sua senha" required>
+        <span class="error" id="confirma-senha-error"></span>
+    </div>
+
+    <div>
+        <label for="genero">Gênero:</label>
+        <select id="genero" name="gender" required>
+            <option value="">Selecione...</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+        <span class="error" id="gender-error"></span>
+    </div>
+
+    <div>
         <label for="message">Mensagem:</label>
         <textarea id="message" name="message" rows="4" placeholder="Sua mensagem" required></textarea>
         <span class="error" id="message-error"></span>
     </div>
 
     <div>
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required>
+            Aceito os <a href="#">termos e condições</a>
+        </label>
+        <span class="error" id="terms-error"></span>
+    </div>
+
+    <div>
         <button type="submit">Enviar</button>
     </div>
 </form>
+
+<div id="response"></div>
 
 <script src="form.js"></script>
 
